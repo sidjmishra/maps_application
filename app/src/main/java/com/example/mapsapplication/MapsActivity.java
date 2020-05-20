@@ -34,15 +34,15 @@ import com.google.android.libraries.places.api.net.FetchPlaceResponse;
 import com.google.android.libraries.places.api.net.FindAutocompletePredictionsRequest;
 import com.google.android.libraries.places.api.net.FindAutocompletePredictionsResponse;
 import com.google.android.libraries.places.api.net.PlacesClient;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+//import com.google.android.material.floatingactionbutton.FloatingActionButton;
+//import com.google.android.material.snackbar.Snackbar;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 import com.mancj.materialsearchbar.adapter.SuggestionsAdapter;
 import com.skyfishjy.library.RippleBackground;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+//import androidx.appcompat.widget.Toolbar;
 
 import android.os.Handler;
 import android.text.Editable;
@@ -55,7 +55,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -71,7 +71,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private MaterialSearchBar materialSearchBar;
     private View mapView;
-    private Button btnFind;
     private RippleBackground rippleBg;
 
     private final float DEFAULT_ZOOM = 15;
@@ -82,7 +81,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_maps);
 
         materialSearchBar = findViewById(R.id.searchBar);
-        btnFind = findViewById(R.id.btn_find);
+        Button btnFind = findViewById(R.id.btn_find);
         rippleBg = findViewById(R.id.ripple_bg);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -113,6 +112,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onButtonClicked(int buttonCode) {
                 if (buttonCode == MaterialSearchBar.BUTTON_NAVIGATION) {
                     //opening or closing a navigation drawer
+                    Log.i("mytag", "Do Something");
                 } else if (buttonCode == MaterialSearchBar.BUTTON_BACK) {
                     materialSearchBar.disableSearch();
                 }
